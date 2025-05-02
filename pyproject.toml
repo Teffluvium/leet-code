@@ -1,22 +1,11 @@
 [project]
 name = "leet-code"
 version = "0.0.1"
-description = "This is a template repository for Python projects that use uv for their dependency management."
+description = "This project is a collection of solution to the LeetCode problems. It is a work in progress and is not yet complete."
 authors = [{ name = "Tim Herrin", email = "teffluvium@gmail.com" }]
 readme = "README.md"
 keywords = ['python']
 requires-python = ">=3.9,<4.0"
-classifiers = [
-    "Intended Audience :: Developers",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-]
 
 [project.urls]
 Homepage = "https://teffluvium.github.io/leet-code/"
@@ -40,7 +29,6 @@ dev = [
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
-
 
 
 [tool.mypy]
@@ -82,7 +70,8 @@ select = [
     # mccabe
     "C90",
     # pycodestyle
-    "E", "W",
+    "E",
+    "W",
     # pyflakes
     "F",
     # pygrep-hooks
