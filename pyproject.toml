@@ -26,6 +26,10 @@ dev = [
     "mkdocstrings[python]>=0.26.1",
 ]
 
+# Add script to run the program
+[project.scripts]
+leet-code = "leet_code.__main__:main"
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
