@@ -86,7 +86,18 @@ preview = true
 
 [tool.coverage.report]
 skip_empty = true
+exclude_also = [
+    "tests/*",
+    "src/leet_code/__main__.py",
+    "src/leet_code/__init__.py",
+]
+
 
 [tool.coverage.run]
 branch = true
 source = ["src"]
+omit = [
+    "tests/*",
+    "src/leet_code/__main__.py",
+    "src/leet_code/__init__.py",
+]

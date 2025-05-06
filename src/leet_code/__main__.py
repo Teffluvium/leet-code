@@ -1,4 +1,5 @@
-from leet_code.add_two_numbers import ListNode, add_two_numbers
+from leet_code.add_two_numbers import add_two_numbers
+from leet_code.ListNode import ListNode
 from leet_code.two_sum import two_sum
 
 
