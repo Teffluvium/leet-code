@@ -1,4 +1,5 @@
 from leet_code.add_two_numbers import add_two_numbers
+from leet_code.length_of_longest_substring import length_of_longest_substring
 from leet_code.ListNode import ListNode
 from leet_code.two_sum import two_sum
 
@@ -21,10 +22,19 @@ def add_two_numbers_example() -> None:
     print(f"  Linked list sum: {l1} + {l2} = {result}")
 
 
+def longest_substring_example() -> None:
+    """Example usage of the length_of_longest_substring function"""
+    input_string = "abcabcbb"
+    result = length_of_longest_substring(input_string)
+    print("Problem 3: Longest Substring Without Repeating Characters")
+    print(f"  Length of the longest substring without repeating characters in '{input_string}': {result}")
+
+
 def main() -> None:
     """Main function to execute the script."""
     two_sum_example()
     add_two_numbers_example()
+    longest_substring_example()
 
 
 if __name__ == "__main__":  # pragma: no cover

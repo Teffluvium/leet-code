@@ -20,7 +20,7 @@ def length_of_longest_substring(s: str) -> int:
     """
     n = len(s)
     max_count = 0
-    display_flag = True
+    display_flag = False  # Set to True to enable debug output
 
     # Assign a bool for all possible characters (initialized to false)
     visited = [False] * 256  # Assuming ASCII characters
