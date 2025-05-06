@@ -9,6 +9,7 @@ copyright: Maintained by <a href="https://teffluvium.com">teffluvium</a>.
 
 nav:
   - Home: index.md
+  - Problem List: problem_list.md
   - Modules: modules.md
 plugins:
   - search
