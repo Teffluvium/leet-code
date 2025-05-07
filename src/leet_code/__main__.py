@@ -1,6 +1,7 @@
 from leet_code.add_two_numbers import add_two_numbers
 from leet_code.length_of_longest_substring import length_of_longest_substring
 from leet_code.ListNode import ListNode
+from leet_code.longest_palindromic_substring import longest_palindromic_substring
 from leet_code.two_sum import two_sum
 
 
@@ -30,11 +31,20 @@ def longest_substring_example() -> None:
     print(f"  Length of the longest substring without repeating characters in '{input_string}': {result}")
 
 
+def longest_palindromic_substring_example() -> None:
+    """Example usage of the longest_palindromic_substring function"""
+    input_string = "babad"
+    result = longest_palindromic_substring(input_string)
+    print("Problem 5: Longest Palindromic Substring")
+    print(f"  Longest palindromic substring in '{input_string}': {result}")
+
+
 def main() -> None:
     """Main function to execute the script."""
     two_sum_example()
     add_two_numbers_example()
     longest_substring_example()
+    longest_palindromic_substring_example()
 
 
 if __name__ == "__main__":  # pragma: no cover

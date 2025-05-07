@@ -11,3 +11,8 @@
 ## Problem 3 - Length of Longest Substring
 
 ::: length_of_longest_substring.length_of_longest_substring
+
+## Problem 5 - Longest Palindromic Substring
+
+::: longest_palindromic_substring.longest_palindromic_substring
+::: longest_palindromic_substring.expand_around_center
