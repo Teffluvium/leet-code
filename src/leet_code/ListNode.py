@@ -54,9 +54,6 @@ class ListNode:
         while number > 0:
             digits.append(number % 10)
             number //= 10
-            print(f"Extracted digit: {digits[-1]}, Remaining number: {number}")
-        if not digits:
-            digits.append(0)
 
         # Create the linked list from the digits
         head = cls(digits[0])
