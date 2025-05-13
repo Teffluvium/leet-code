@@ -1,4 +1,9 @@
-from leet_code import palindrome_number, string_to_integer, zigzag_conversion
+from leet_code import (
+    container_with_most_water,
+    palindrome_number,
+    string_to_integer,
+    zigzag_conversion,
+)
 from leet_code.add_two_numbers import add_two_numbers
 from leet_code.length_of_longest_substring import length_of_longest_substring
 from leet_code.ListNode import ListNode
@@ -65,6 +70,14 @@ def palindrome_number_example() -> None:
     print(f"  Is {input_number} a palindrome? {result}")
 
 
+def container_with_most_water_example() -> None:
+    """Example usage of the max_area function"""
+    height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
+    result = container_with_most_water.max_area(height)
+    print("Problem 11: Container With Most Water")
+    print(f"  Maximum area of the container with heights {height}: {result}")
+
+
 def main() -> None:
     """Main function to execute the script."""
     two_sum_example()
@@ -74,6 +87,7 @@ def main() -> None:
     ziggzag_conversion_example()
     string_to_integer_example()
     palindrome_number_example()
+    container_with_most_water_example()
 
 
 if __name__ == "__main__":  # pragma: no cover

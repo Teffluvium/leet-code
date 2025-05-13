@@ -37,3 +37,7 @@
 ## Problem 9 - Palindrome Number
 
 ::: palindrome_number.is_palindrome
+
+## Problem 11 - Container with Most Water
+
+::: container_with_most_water.max_area

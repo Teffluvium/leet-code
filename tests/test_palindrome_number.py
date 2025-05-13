@@ -13,7 +13,7 @@ from leet_code.palindrome_number import is_palindrome
         (0, True),
     ],
 )
-def test_is_palindrome(x, expected):
+def test_is_palindrome(x: int, expected: bool) -> None:
     """Test the is_palindrome function."""
     assert is_palindrome(x) == expected
 
@@ -28,6 +28,6 @@ def test_is_palindrome(x, expected):
         (0),
     ],
 )
-def test_is_palindrome_no_expected(x):
+def test_is_palindrome_no_expected(x: int) -> None:
     """Test the is_palindrome function without expected values."""
     assert is_palindrome(x) is not None
