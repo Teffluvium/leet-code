@@ -1,14 +1,24 @@
 def convert(input_str: str, num_rows: int) -> str:
     """
-    The string "PAYPALISHIRING" is written in a zigzag pattern on a given
-    number of rows like this: (you may want to display this pattern in a
-    fixed font for better legibility)
+    Convert a string to a zigzag pattern on a given number of rows and
+    read it line by line.
 
-    P   A   H   N
-    A P L S I I G
-    Y   I   R
+    Example:
+        The string "PAYPALISHIRING" is written in a zigzag pattern on a given
+        number of rows like this: (you may want to display this pattern in a
+        fixed font for better legibility)
 
-    And then read line by line: "PAHNAPLSIIGYIR"
+        P   A   H   N
+        A P L S I I G
+        Y   I   R
+
+        And then read line by line: "PAHNAPLSIIGYIR"
+
+    :param input_str: The input string to be converted
+    :param num_rows: The number of rows for the zigzag pattern
+    :return: The zigzag converted string
+
+
     """
     if num_rows <= 0:
         return input_str
