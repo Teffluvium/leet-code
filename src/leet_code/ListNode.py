@@ -6,6 +6,19 @@ from typing import Optional
 
 @dataclass
 class ListNode:
+    """Definition for singly-linked list.
+
+    Each node contains a single digit and a reference to the next node.
+    The digits are stored in reverse order, meaning that the 1's digit is at the head of the list.
+
+    Example:
+    The number 123 is represented as 3 -> 2 -> 1.
+
+    Attributes:
+        val (int): The value of the node (a single digit).
+        next (Optional[ListNode]): A reference to the next node in the list.
+    """
+
     val: int
     next: Optional["ListNode"] = None
 
@@ -17,10 +30,10 @@ class ListNode:
             tmp = tmp.next
         return f"[{', '.join(result)}]"
 
-    # Define a method to initialize the ListNode with a Python list
     @classmethod
     def from_iter(cls, iterable: "Iterable[int]") -> "ListNode":
         """Create a ListNode from an ordered iterable of integers."""
+        # Check if the input is ordered and contains only integers between 0 and 9
 
         if not isinstance(iterable, Iterable):
             raise TypeError("Input must be an iterable")
@@ -28,6 +41,12 @@ class ListNode:
         lst = list(iterable)
         if not lst:
             raise ValueError("Empty iterable")
+
+        try:
+            # Try indexing into the iterable to check if it's ordered
+            _ = iterable[0]
+        except IndexError as exc:
+            raise IndexError("Input must be an ordered iterable") from exc
 
         # Validate that the iterable contains only integers between 0 and 9
         if not all(isinstance(x, int) and 0 <= x <= 9 for x in lst):

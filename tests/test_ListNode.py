@@ -23,6 +23,13 @@ from leet_code.ListNode import ListNode
             "Input must be an iterable",
         ),
         (
+            # Unordered iterable case
+            {1, 2, 3},
+            None,
+            pytest.raises(IndexError),
+            "Input must be an ordered iterable",
+        ),
+        (
             # Empty iterable case
             [],
             None,
