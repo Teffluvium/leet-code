@@ -32,7 +32,18 @@ class ListNode:
 
     @classmethod
     def from_iter(cls, iterable: "Iterable[int]") -> "ListNode":
-        """Create a ListNode from an ordered iterable of integers."""
+        """Create a ListNode from an ordered iterable of integers.
+
+        Args:
+            iterable (Iterable[int]): An ordered iterable of integers (0-9).
+
+        Returns:
+            ListNode: The head of the linked list.
+
+        Raises:
+            TypeError: If the input is not an iterable or if it is unordered.
+            ValueError: If the iterable is empty or contains invalid integers.
+        """
 
         if not isinstance(iterable, Iterable):
             raise TypeError("Input must be an iterable")
@@ -61,7 +72,18 @@ class ListNode:
 
     @classmethod
     def from_int(cls, number: int) -> "ListNode":
-        """Create a ListNode from an integer."""
+        """Create a ListNode from an integer.
+
+        Args:
+            number (int): The integer to convert.
+
+        Returns:
+            ListNode: The head of the linked list representing the integer.
+
+        Raises:
+            TypeError: If the input is not an integer.
+            ValueError: If the input is a negative integer.
+        """
         if not isinstance(number, int):
             raise TypeError("Input must be an integer")
 
