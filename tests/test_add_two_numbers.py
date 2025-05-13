@@ -1,7 +1,7 @@
 import pytest
 
+from leet_code.add_two_numbers import add_two_numbers
 from leet_code.ListNode import ListNode
-from src.leet_code.add_two_numbers import add_two_numbers
 
 
 @pytest.mark.parametrize(

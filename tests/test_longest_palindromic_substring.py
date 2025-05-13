@@ -17,7 +17,7 @@ from leet_code.longest_palindromic_substring import longest_palindromic_substrin
         ("abcde", "e"),  # Any single character is valid
     ],
 )
-def test_longest_palindromic_substring(input_string, expected_output):
+def test_longest_palindromic_substring(input_string: str, expected_output: str) -> None:
     result = longest_palindromic_substring(input_string)
     # Since there can be multiple valid outputs, check if the result is a palindrome
     assert (

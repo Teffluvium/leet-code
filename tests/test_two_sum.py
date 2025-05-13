@@ -1,7 +1,7 @@
 # create tests for two_sum.py
 import pytest
 
-from src.leet_code.two_sum import two_sum
+from leet_code.two_sum import two_sum
 
 
 @pytest.mark.parametrize(
