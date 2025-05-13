@@ -42,10 +42,11 @@ class ListNode:
             raise ValueError("Empty iterable")
 
         try:
-            # Try indexing into the iterable to check if it's ordered
-            _ = iterable[0]
-        except IndexError as exc:
-            raise IndexError("Input must be an ordered iterable") from exc
+            # Try indexing into the iterable to check if it is ordered.
+            # This will fail for unordered iterables.
+            _ = iterable[0]  # type: ignore[index]
+        except TypeError as e:
+            raise TypeError("Input must be an ordered iterable") from e
 
         # Validate that the iterable contains only integers between 0 and 9
         if not all(isinstance(x, int) and 0 <= x <= 9 for x in lst):

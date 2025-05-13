@@ -26,7 +26,7 @@ from leet_code.ListNode import ListNode
             # Unordered iterable case
             {1, 2, 3},
             None,
-            pytest.raises(IndexError),
+            pytest.raises(TypeError),
             "Input must be an ordered iterable",
         ),
         (
