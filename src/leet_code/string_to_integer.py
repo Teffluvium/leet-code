@@ -59,7 +59,7 @@ def my_atoi(s: str) -> int:
     return sign * my_int
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     # Example usage
     input_str = "   -42"
     result = my_atoi(input_str)

@@ -27,7 +27,7 @@ def reverse_integer(x: int) -> int:
     return sign * reversed_x
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     # Example usage
     print(f"{reverse_integer(123) = }")  # Output: 321
     print(f"{reverse_integer(-123) = }")  # Output: -321

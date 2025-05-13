@@ -21,7 +21,7 @@ def is_palindrome(x: int) -> bool:
     return reverse == x
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     print(f"{is_palindrome(121) = }")  # True
     print(f"{is_palindrome(-121) = }")  # False
     print(f"{is_palindrome(10) = }")  # False

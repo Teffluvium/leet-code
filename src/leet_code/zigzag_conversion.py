@@ -51,7 +51,7 @@ def convert(input_str: str, num_rows: int) -> str:
     return "".join(result_list)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     # Example usage
     s = "PAYPALISHIRING"
     numRows = 3
