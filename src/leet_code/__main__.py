@@ -1,4 +1,4 @@
-from leet_code import string_to_integer, zigzag_conversion
+from leet_code import palindrome_number, string_to_integer, zigzag_conversion
 from leet_code.add_two_numbers import add_two_numbers
 from leet_code.length_of_longest_substring import length_of_longest_substring
 from leet_code.ListNode import ListNode
@@ -57,6 +57,14 @@ def string_to_integer_example() -> None:
     print(f"  Converted integer from '{input_string}': {result}")
 
 
+def palindrome_number_example() -> None:
+    """Example usage of the is_palindrome function"""
+    input_number = 121
+    result = palindrome_number.is_palindrome(input_number)
+    print("Problem 9: Palindrome Number")
+    print(f"  Is {input_number} a palindrome? {result}")
+
+
 def main() -> None:
     """Main function to execute the script."""
     two_sum_example()
@@ -65,6 +73,7 @@ def main() -> None:
     longest_palindromic_substring_example()
     ziggzag_conversion_example()
     string_to_integer_example()
+    palindrome_number_example()
 
 
 if __name__ == "__main__":  # pragma: no cover

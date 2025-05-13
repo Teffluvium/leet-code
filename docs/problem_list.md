@@ -28,3 +28,7 @@
 ## Problem 8 - String to Integer (atoi)
 
 ::: string_to_integer.my_atoi
+
+## Problem 9 - Palindrome Number
+
+::: palindrome_number.is_palindrome
