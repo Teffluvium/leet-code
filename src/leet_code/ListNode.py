@@ -33,7 +33,6 @@ class ListNode:
     @classmethod
     def from_iter(cls, iterable: "Iterable[int]") -> "ListNode":
         """Create a ListNode from an ordered iterable of integers."""
-        # Check if the input is ordered and contains only integers between 0 and 9
 
         if not isinstance(iterable, Iterable):
             raise TypeError("Input must be an iterable")
