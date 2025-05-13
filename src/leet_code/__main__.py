@@ -1,4 +1,4 @@
-from leet_code import zigzag_conversion
+from leet_code import string_to_integer, zigzag_conversion
 from leet_code.add_two_numbers import add_two_numbers
 from leet_code.length_of_longest_substring import length_of_longest_substring
 from leet_code.ListNode import ListNode
@@ -49,6 +49,14 @@ def ziggzag_conversion_example() -> None:
     print(f"  Zigzag conversion of '{s}' with {num_rows} rows: {result}")
 
 
+def string_to_integer_example() -> None:
+    """Example usage of the string_to_integer function"""
+    input_string = "   -42"
+    result = string_to_integer.my_atoi(input_string)
+    print("Problem 8: String to Integer (atoi)")
+    print(f"  Converted integer from '{input_string}': {result}")
+
+
 def main() -> None:
     """Main function to execute the script."""
     two_sum_example()
@@ -56,6 +64,7 @@ def main() -> None:
     longest_substring_example()
     longest_palindromic_substring_example()
     ziggzag_conversion_example()
+    string_to_integer_example()
 
 
 if __name__ == "__main__":  # pragma: no cover

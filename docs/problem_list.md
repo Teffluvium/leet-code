@@ -20,3 +20,11 @@
 ## Probloem 6 - Zig Zag Conversion
 
 ::: zigzag_conversion.convert
+
+## Problem 7 - Reverse Integer
+
+::: reverse_integer.reverse_integer
+
+## Problem 8 - String to Integer (atoi)
+
+::: string_to_integer.my_atoi
