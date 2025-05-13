@@ -1,3 +1,4 @@
+from leet_code import zigzag_conversion
 from leet_code.add_two_numbers import add_two_numbers
 from leet_code.length_of_longest_substring import length_of_longest_substring
 from leet_code.ListNode import ListNode
@@ -39,12 +40,22 @@ def longest_palindromic_substring_example() -> None:
     print(f"  Longest palindromic substring in '{input_string}': {result}")
 
 
+def ziggzag_conversion_example() -> None:
+    """Example usage of the zigzag_conversion function"""
+    s = "PAYPALISHIRING"
+    num_rows = 3
+    result = zigzag_conversion.convert(s, num_rows)
+    print("Problem 6: Zigzag Conversion")
+    print(f"  Zigzag conversion of '{s}' with {num_rows} rows: {result}")
+
+
 def main() -> None:
     """Main function to execute the script."""
     two_sum_example()
     add_two_numbers_example()
     longest_substring_example()
     longest_palindromic_substring_example()
+    ziggzag_conversion_example()
 
 
 if __name__ == "__main__":  # pragma: no cover
