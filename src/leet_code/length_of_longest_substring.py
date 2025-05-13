@@ -2,8 +2,11 @@ def length_of_longest_substring(s: str) -> int:
     """
     Find the length of the longest substring without repeating characters.
 
-    :param s: Input string
-    :return: Length of the longest substring without repeating characters
+    Args:
+        s (str): Input string
+
+    Returns:
+        int: Length of the longest substring without repeating characters
     """
     n = len(s)
     max_count = 0

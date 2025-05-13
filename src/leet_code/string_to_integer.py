@@ -19,9 +19,11 @@ def my_atoi(s: str) -> int:
         Input: "   -42"
         Output: -42
 
-    :param s: Input string
-    :return: Converted integer
+    Args:
+        s (str): The input string to convert.
 
+    Returns:
+        int: The converted integer.
     """
     int_min = -(2**31)
     int_max = 2**31 - 1

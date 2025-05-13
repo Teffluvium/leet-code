@@ -10,9 +10,12 @@ def add_two_numbers(
     """
     Add two numbers represented by linked lists.
 
-    :param l1: First number as a linked list
-    :param l2: Second number as a linked list
-    :return: Sum of the two numbers as a linked list
+    Args:
+        l1 (ListNode): First number as a linked list.
+        l2 (ListNode): Second number as a linked list.
+
+    Returns:
+        ListNode: Sum of the two numbers as a linked list.
     """
     # Initialize the result list and carry
     dummy_head = ListNode(0)

@@ -2,9 +2,12 @@ def two_sum(num_list: list[int], target: int) -> list[int]:
     """
     Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
-    :param num_list: List of integers
-    :param target: Target integer
-    :return: List of indices of the two numbers
+    Args:
+        num_list (list[int]): List of integers.
+        target (int): Target integer.
+
+    Returns:
+        list[int]: List of indices of the two numbers.
     """
     # Initialize a dictionary to store the indices of the numbers
     num_dict: dict[int, int] = {}

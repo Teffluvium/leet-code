@@ -14,11 +14,12 @@ def convert(input_str: str, num_rows: int) -> str:
 
         And then read line by line: "PAHNAPLSIIGYIR"
 
-    :param input_str: The input string to be converted
-    :param num_rows: The number of rows for the zigzag pattern
-    :return: The zigzag converted string
+    Args:
+        input_str (str): The input string to be converted
+        num_rows (int): The number of rows for the zigzag pattern
 
-
+    Returns:
+        str: The zigzag converted string
     """
     if num_rows <= 0:
         return input_str

@@ -4,6 +4,7 @@ def is_palindrome(x: int) -> bool:
 
     Args:
         x (int): The integer to check.
+
     Returns:
         bool: True if x is a palindrome, False otherwise.
     """

@@ -1,7 +1,13 @@
 def reverse_integer(x: int) -> int:
-    """Reverse the digits of an integer.
-    :param x: The integer to reverse
-    :return: The reversed integer, or 0 if the result is outside the 32-bit signed integer range.
+    """Reverse the digits of an int
+
+      If the reversed integer overflows a 32-bit signed integer, return 0. The range of a 32-bit signed integer is [-2^31, 2^31 - 1].  eger.
+
+    Args:
+        x (int): The integer to reverse. It can be positive or negative.
+
+    Returns:
+        int: The reversed integer.
     """
     sign = -1 if x < 0 else 1
 

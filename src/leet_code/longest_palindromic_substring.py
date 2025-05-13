@@ -3,10 +3,13 @@ def expand_around_center(s: str, left: int, right: int) -> int:
     Expand around the center to find the length of the longest palindromic
     substring.
 
-    :param s: Input string
-    :param left: Left index
-    :param right: Right index
-    :return: Length of the palindromic substring
+    Args:
+        s (str): Input string
+        left (int): Left index
+        right (int): Right index
+
+    Returns:
+        int: Length of the palindromic substring
     """
     while left >= 0 and right < len(s) and s[left] == s[right]:
         left -= 1
@@ -19,8 +22,11 @@ def longest_palindromic_substring(s: str) -> str:
     """
     Find the longest palindromic substring in a given string.
 
-    :param s: Input string
-    :return: Longest palindromic substring
+    Args:
+        s (str): Input string
+
+    Returns:
+        str: Longest palindromic substring
     """
     if not s:
         return ""

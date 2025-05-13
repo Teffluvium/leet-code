@@ -14,7 +14,12 @@
 
 ## Problem 5 - Longest Palindromic Substring
 
+### longest_palindromic_substring
+
 ::: longest_palindromic_substring.longest_palindromic_substring
+
+### expand_around_center
+
 ::: longest_palindromic_substring.expand_around_center
 
 ## Probloem 6 - Zig Zag Conversion
