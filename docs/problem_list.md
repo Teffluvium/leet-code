@@ -41,3 +41,7 @@
 ## Problem 11 - Container with Most Water
 
 ::: container_with_most_water.max_area
+
+## Problem 12 - Integer to Roman
+
+::: int_to_roman.int_to_roman
