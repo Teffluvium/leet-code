@@ -53,3 +53,7 @@
 ## Problem 14 - Longest Common Prefix
 
 ::: longest_common_prefix.longest_common_prefix
+
+## Problem 20 - Valid Parantheses
+
+::: valid_parentheses.is_valid
