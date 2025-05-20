@@ -49,3 +49,7 @@
 ## Problem 13 - Roman to Integer
 
 ::: int_to_roman.roman_to_int
+
+## Problem 14 - Longest Common Prefix
+
+::: longest_common_prefix.longest_common_prefix
