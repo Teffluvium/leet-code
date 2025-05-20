@@ -5,7 +5,7 @@ from leet_code.two_sum import two_sum
 
 
 @pytest.mark.parametrize(
-    "num_list, target, expected",
+    ("num_list", "target", "expected"),
     [
         ([2, 7, 11, 15], 9, [0, 1]),
         ([3, 2, 4], 6, [1, 2]),
@@ -27,7 +27,7 @@ def test_two_sum(num_list: list[int], target: int, expected: list[int]) -> None:
 
 
 @pytest.mark.parametrize(
-    "num_list, target",
+    ("num_list", "target"),
     [
         ([1, 2, 3], 10),
         ([0, 0, 0], 1),

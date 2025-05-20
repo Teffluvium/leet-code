@@ -1,36 +1,33 @@
-from leet_code import (
-    container_with_most_water,
-    palindrome_number,
-    string_to_integer,
-    zigzag_conversion,
-)
+"""Test script for valid_parentheses.py."""
+
+from leet_code import container_with_most_water, palindrome_number, string_to_integer, zigzag_conversion
 from leet_code.add_two_numbers import add_two_numbers
 from leet_code.length_of_longest_substring import length_of_longest_substring
-from leet_code.ListNode import ListNode
+from leet_code.list_node import ListNode
 from leet_code.longest_palindromic_substring import longest_palindromic_substring
 from leet_code.two_sum import two_sum
 
 
 def two_sum_example() -> None:
-    """Example usage of the two_sum function"""
-    nums = [2, 7, 11, 15]
+    """Example usage of the two_sum function."""
+    nums: list[int] = [2, 7, 11, 15]
     target = 9
-    result = two_sum(nums, target)
+    result: list[int] = two_sum(nums, target)
     print("Problem 1: Two Sum")
     print(f"  Indices of the two numbers from {nums} that add up to {target}: {result}")
 
 
 def add_two_numbers_example() -> None:
-    """Example usage of the add_two_numbers function"""
+    """Example usage of the add_two_numbers function."""
     l1 = ListNode(2, ListNode(4, ListNode(3)))
     l2 = ListNode(5, ListNode(6, ListNode(4)))
-    result = add_two_numbers(l1, l2)
+    result: ListNode | None = add_two_numbers(l1, l2)
     print("Problem 2: Add Two Numbers")
     print(f"  Linked list sum: {l1} + {l2} = {result}")
 
 
 def longest_substring_example() -> None:
-    """Example usage of the length_of_longest_substring function"""
+    """Example usage of the length_of_longest_substring function."""
     input_string = "abcabcbb"
     result = length_of_longest_substring(input_string)
     print("Problem 3: Longest Substring Without Repeating Characters")
@@ -38,7 +35,7 @@ def longest_substring_example() -> None:
 
 
 def longest_palindromic_substring_example() -> None:
-    """Example usage of the longest_palindromic_substring function"""
+    """Example usage of the longest_palindromic_substring function."""
     input_string = "babad"
     result = longest_palindromic_substring(input_string)
     print("Problem 5: Longest Palindromic Substring")
@@ -46,7 +43,7 @@ def longest_palindromic_substring_example() -> None:
 
 
 def ziggzag_conversion_example() -> None:
-    """Example usage of the zigzag_conversion function"""
+    """Example usage of the zigzag_conversion function."""
     s = "PAYPALISHIRING"
     num_rows = 3
     result = zigzag_conversion.convert(s, num_rows)
@@ -55,7 +52,7 @@ def ziggzag_conversion_example() -> None:
 
 
 def string_to_integer_example() -> None:
-    """Example usage of the string_to_integer function"""
+    """Example usage of the string_to_integer function."""
     input_string = "   -42"
     result = string_to_integer.my_atoi(input_string)
     print("Problem 8: String to Integer (atoi)")
@@ -63,7 +60,7 @@ def string_to_integer_example() -> None:
 
 
 def palindrome_number_example() -> None:
-    """Example usage of the is_palindrome function"""
+    """Example usage of the is_palindrome function."""
     input_number = 121
     result = palindrome_number.is_palindrome(input_number)
     print("Problem 9: Palindrome Number")
@@ -71,7 +68,7 @@ def palindrome_number_example() -> None:
 
 
 def container_with_most_water_example() -> None:
-    """Example usage of the max_area function"""
+    """Example usage of the max_area function."""
     height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
     result = container_with_most_water.max_area(height)
     print("Problem 11: Container With Most Water")

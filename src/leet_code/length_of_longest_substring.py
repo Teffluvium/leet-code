@@ -7,6 +7,7 @@ def length_of_longest_substring(s: str) -> int:
 
     Returns:
         int: Length of the longest substring without repeating characters
+
     """
     n = len(s)
     max_count = 0
@@ -20,10 +21,9 @@ def length_of_longest_substring(s: str) -> int:
             if visited[ord(s[j])]:
                 break
 
-            else:
-                # Otherwise, update the visited status and the max_count
-                max_count = max(max_count, j - i + 1)
-                visited[ord(s[j])] = True
+            # Otherwise, update the visited status and the max_count
+            max_count = max(max_count, j - i + 1)
+            visited[ord(s[j])] = True
 
         # Shift the sliding window and reset the status for the first character
         # of the previous window

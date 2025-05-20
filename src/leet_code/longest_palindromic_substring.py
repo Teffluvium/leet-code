@@ -1,7 +1,6 @@
 def expand_around_center(s: str, left: int, right: int) -> int:
     """
-    Expand around the center to find the length of the longest palindromic
-    substring.
+    Expand around the center to find the length of the longest palindromic substring.
 
     Args:
         s (str): Input string
@@ -10,6 +9,7 @@ def expand_around_center(s: str, left: int, right: int) -> int:
 
     Returns:
         int: Length of the palindromic substring
+
     """
     while left >= 0 and right < len(s) and s[left] == s[right]:
         left -= 1
@@ -27,6 +27,7 @@ def longest_palindromic_substring(s: str) -> str:
 
     Returns:
         str: Longest palindromic substring
+
     """
     if not s:
         return ""

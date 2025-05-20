@@ -1,11 +1,11 @@
 import pytest
 
 from leet_code.add_two_numbers import add_two_numbers
-from leet_code.ListNode import ListNode
+from leet_code.list_node import ListNode
 
 
 @pytest.mark.parametrize(
-    "l1, l2, expected",
+    ("l1", "l2", "expected"),
     [
         (
             ListNode.from_iter([2, 4, 3]),
@@ -37,7 +37,7 @@ def test_add_two_numbers(l1: ListNode, l2: ListNode, expected: ListNode) -> None
 
 
 @pytest.mark.parametrize(
-    "l1, l2",
+    ("l1", "l2"),
     [
         (
             ListNode(1, ListNode(2)),
@@ -65,7 +65,7 @@ def test_add_two_numbers_empty(l1: ListNode, l2: ListNode) -> None:
 
 
 @pytest.mark.parametrize(
-    "l1, l2, expected",
+    ("l1", "l2", "expected"),
     [
         (
             ListNode.from_iter([9, 9, 9, 9, 9, 9, 9]),
@@ -88,7 +88,7 @@ def test_add_two_numbers_large_numbers(l1: ListNode, l2: ListNode, expected: Lis
     assert str(result) == str(expected), f"Expected {expected}, but got {result}"
 
 
-@pytest.mark.parametrize("l1, l2", [(ListNode(0), ListNode(0))])
+@pytest.mark.parametrize(("l1", "l2"), [(ListNode(0), ListNode(0))])
 def test_add_two_numbers_zero(l1: ListNode, l2: ListNode) -> None:
     """
     Test the add_two_numbers function with zero.

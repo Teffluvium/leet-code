@@ -1,5 +1,7 @@
 def is_palindrome(x: int) -> bool:
-    """Check if an integer is a palindrome.
+    """
+    Check if an integer is a palindrome.
+
     A palindrome is a number that remains the same when its digits are reversed.
 
     Args:
@@ -7,8 +9,8 @@ def is_palindrome(x: int) -> bool:
 
     Returns:
         bool: True if x is a palindrome, False otherwise.
-    """
 
+    """
     reverse = 0
     copy = x
 

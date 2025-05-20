@@ -8,6 +8,7 @@ def two_sum(num_list: list[int], target: int) -> list[int]:
 
     Returns:
         list[int]: List of indices of the two numbers.
+
     """
     # Initialize a dictionary to store the indices of the numbers
     num_dict: dict[int, int] = {}

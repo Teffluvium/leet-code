@@ -1,7 +1,6 @@
 def convert(input_str: str, num_rows: int) -> str:
     """
-    Convert a string to a zigzag pattern on a given number of rows and
-    read it line by line.
+    Convert a string to a zigzag pattern on a given number of rows and read it line by line.
 
     Example:
         The string "PAYPALISHIRING" is written in a zigzag pattern on a given
@@ -20,6 +19,7 @@ def convert(input_str: str, num_rows: int) -> str:
 
     Returns:
         str: The zigzag converted string
+
     """
     if num_rows <= 0:
         return input_str
@@ -54,8 +54,8 @@ def convert(input_str: str, num_rows: int) -> str:
 if __name__ == "__main__":  # pragma: no cover
     # Example usage
     s = "PAYPALISHIRING"
-    numRows = 3
-    result = convert(s, numRows)
+    num_rows = 3
+    result = convert(s, num_rows)
     expected_result = "PAHNAPLSIIGYIR"
-    print(f"Zigzag conversion of '{s}' with {numRows} rows: {result}")
+    print(f"Zigzag conversion of '{s}' with {num_rows} rows: {result}")
     print(f"Expected result: {expected_result}")

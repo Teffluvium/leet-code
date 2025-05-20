@@ -4,21 +4,32 @@ from leet_code.valid_parentheses import is_valid
 
 
 @pytest.mark.parametrize(
-    "input_string, expected_output",
+    "input_string",
     [
-        ("()", True),
-        ("()[]{}", True),
-        ("(]", False),
-        ("([)]", False),
-        ("{[]}", True),
-        ("", True),  # Edge case: empty string
-        (")(", False),  # Edge case: unbalanced parentheses
-        ("((()))", True),  # Nested parentheses
-        ("{[()]}", True),  # Mixed types of parentheses
-        ("]", False),  # Single closing bracket
+        "()",
+        "()[]{}",
+        "{[]}",
+        "",  # Edge case: empty string
+        "((()))",  # Nested parentheses
+        "{[()]}",  # Mixed types of parentheses
     ],
 )
-def test_is_valid_parentheses(input_string: str, expected_output: bool) -> None:
-    """Test the is_valid_parentheses function."""
-    result = is_valid(input_string)
-    assert result == expected_output, f"Expected {expected_output}, but got {result}"
+def test_is_valid_parenthesis_true(input_string: str) -> None:
+    """Test the True reposonses of is_valid_parentheses function."""
+    result: bool = is_valid(input_string)
+    assert result is True, f"Expected {True}, but got {result}"
+
+
+@pytest.mark.parametrize(
+    "input_string",
+    [
+        "(]",
+        "([)]",
+        ")(",  # Edge case: unbalanced parentheses
+        "]",  # Single closing bracket
+    ],
+)
+def test_is_valid_parenthesis_false(input_string: str) -> None:
+    """Test the False reposonses of is_valid_parentheses function."""
+    result: bool = is_valid(input_string)
+    assert result is False, f"Expected {False}, but got {result}"

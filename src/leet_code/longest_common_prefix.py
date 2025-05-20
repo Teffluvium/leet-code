@@ -7,6 +7,7 @@ def longest_common_prefix(strs: list[str]) -> str:
 
     Returns:
         str: The longest common prefix. If there is no common prefix, return an empty string.
+
     """
     if not strs:
         return ""

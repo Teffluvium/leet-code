@@ -24,6 +24,7 @@ def my_atoi(s: str) -> int:
 
     Returns:
         int: The converted integer.
+
     """
     int_min = -(2**31)
     int_max = 2**31 - 1

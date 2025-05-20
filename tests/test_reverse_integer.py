@@ -4,7 +4,7 @@ from leet_code.reverse_integer import reverse_integer
 
 
 @pytest.mark.parametrize(
-    "x, expected",
+    ("x", "expected"),
     [
         (123, 321),
         (-123, -321),

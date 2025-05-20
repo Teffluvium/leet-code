@@ -6,7 +6,8 @@ from typing import Optional
 
 @dataclass
 class ListNode:
-    """Definition for singly-linked list.
+    """
+    Definition for singly-linked list.
 
     Each node contains a single digit and a reference to the next node.
     The digits are stored in reverse order, meaning that the 1's digit is at the head of the list.
@@ -17,13 +18,14 @@ class ListNode:
     Attributes:
         val (int): The value of the node (a single digit).
         next (Optional[ListNode]): A reference to the next node in the list.
+
     """
 
     val: int
     next: Optional["ListNode"] = None
 
     def __str__(self) -> str:
-        tmp: Optional[ListNode] = self
+        tmp: ListNode | None = self
         result = []
         while tmp:
             result.append(str(tmp.val))
@@ -32,7 +34,8 @@ class ListNode:
 
     @classmethod
     def from_iter(cls, iterable: "Iterable[int]") -> "ListNode":
-        """Create a ListNode from an ordered iterable of integers.
+        """
+        Create a ListNode from an ordered iterable of integers.
 
         Args:
             iterable (Iterable[int]): An ordered iterable of integers (0-9).
@@ -43,25 +46,31 @@ class ListNode:
         Raises:
             TypeError: If the input is not an iterable or if it is unordered.
             ValueError: If the iterable is empty or contains invalid integers.
-        """
 
+        """
         if not isinstance(iterable, Iterable):
-            raise TypeError("Input must be an iterable")
+            msg = "Input must be an iterable"
+            raise TypeError(msg)
 
         lst = list(iterable)
         if not lst:
-            raise ValueError("Empty iterable")
+            msg = "Empty iterable"
+            raise ValueError(msg)
 
         try:
             # Try indexing into the iterable to check if it is ordered.
             # This will fail for unordered iterables.
             _ = iterable[0]  # type: ignore[index]
         except TypeError as e:
-            raise TypeError("Input must be an ordered iterable") from e
+            msg = "Input must be an ordered iterable"
+            raise TypeError(msg) from e
 
         # Validate that the iterable contains only integers between 0 and 9
-        if not all(isinstance(x, int) and 0 <= x <= 9 for x in lst):
-            raise ValueError("Iterable must contain integers between 0 and 9")
+        x_min = 0
+        x_max = 9
+        if not all(isinstance(x, int) and x_min <= x <= x_max for x in lst):
+            msg = "Iterable must contain integers between 0 and 9"
+            raise ValueError(msg)
 
         head = cls(lst[0])
         current = head
@@ -72,7 +81,8 @@ class ListNode:
 
     @classmethod
     def from_int(cls, number: int) -> "ListNode":
-        """Create a ListNode from an integer.
+        """
+        Create a ListNode from an integer.
 
         Args:
             number (int): The integer to convert.
@@ -83,12 +93,15 @@ class ListNode:
         Raises:
             TypeError: If the input is not an integer.
             ValueError: If the input is a negative integer.
+
         """
         if not isinstance(number, int):
-            raise TypeError("Input must be an integer")
+            msg = "Input must be an integer"
+            raise TypeError(msg)
 
         if number < 0:
-            raise ValueError("Number must be non-negative")
+            msg = "Number must be non-negative"
+            raise ValueError(msg)
 
         digits = []
         # Extract digits in reverse order

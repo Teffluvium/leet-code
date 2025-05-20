@@ -1,12 +1,12 @@
-from typing import Optional
+from __future__ import annotations
 
-from leet_code.ListNode import ListNode
+from leet_code.list_node import ListNode
 
 
 def add_two_numbers(
-    l1: Optional[ListNode],
-    l2: Optional[ListNode],
-) -> Optional[ListNode]:
+    l1: ListNode | None,
+    l2: ListNode | None,
+) -> ListNode | None:
     """
     Add two numbers represented by linked lists.
 
@@ -16,6 +16,7 @@ def add_two_numbers(
 
     Returns:
         ListNode: Sum of the two numbers as a linked list.
+
     """
     # Initialize the result list and carry
     dummy_head = ListNode(0)

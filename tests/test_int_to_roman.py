@@ -4,7 +4,7 @@ from leet_code.int_to_roman import int_to_roman, roman_to_int
 
 
 @pytest.mark.parametrize(
-    "input_num, expected_output",
+    ("input_num", "expected_output"),
     [
         (1, "I"),
         (4, "IV"),
@@ -19,7 +19,7 @@ from leet_code.int_to_roman import int_to_roman, roman_to_int
 def test_int_to_roman(input_num: int, expected_output: str) -> None:
     """Test the int_to_roman function."""
     if input_num in [0, 4000]:
-        with pytest.raises(ValueError):
+        with pytest.raises(ValueError, match="Input must be between 1 and 3999."):
             int_to_roman(input_num)
     else:
         result = int_to_roman(input_num)
@@ -29,7 +29,7 @@ def test_int_to_roman(input_num: int, expected_output: str) -> None:
 
 # Test cases for the roman_to_int function
 @pytest.mark.parametrize(
-    "input_roman, expected_output",
+    ("input_roman", "expected_output"),
     [
         ("I", 1),
         ("IV", 4),
@@ -43,8 +43,8 @@ def test_int_to_roman(input_num: int, expected_output: str) -> None:
 )
 def test_roman_to_int(input_roman: str, expected_output: int) -> None:
     """Test the roman_to_int function."""
-    if input_roman == "MMMM" or input_roman == "":
-        with pytest.raises(ValueError):
+    if input_roman in {"MMMM", ""}:
+        with pytest.raises(ValueError):  # noqa: PT011
             roman_to_int(input_roman)
 
     else:

@@ -4,7 +4,7 @@ from leet_code.longest_palindromic_substring import longest_palindromic_substrin
 
 
 @pytest.mark.parametrize(
-    "input_string, expected_output",
+    ("input_string", "expected_output"),
     [
         ("babad", "aba"),  # "bab" is also valid
         ("cbbd", "bb"),

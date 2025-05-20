@@ -4,18 +4,28 @@ from leet_code.palindrome_number import is_palindrome
 
 
 @pytest.mark.parametrize(
-    "x, expected",
+    "x",
     [
-        (121, True),
-        (-121, False),
-        (10, False),
-        (12321, True),
-        (0, True),
+        121,
+        12321,
+        0,
     ],
 )
-def test_is_palindrome(x: int, expected: bool) -> None:
-    """Test the is_palindrome function."""
-    assert is_palindrome(x) == expected
+def test_is_palindrome_true(x: int) -> None:
+    """Test the is_palindrome function for palindromic numbers."""
+    assert is_palindrome(x) is True
+
+
+@pytest.mark.parametrize(
+    "x",
+    [
+        -121,
+        10,
+    ],
+)
+def test_is_palindrome_false(x: int) -> None:
+    """Test the is_palindrome function for non-palindromic numbers."""
+    assert is_palindrome(x) is False
 
 
 @pytest.mark.parametrize(

@@ -1,3 +1,6 @@
+"""Check if a string containing parentheses is valid."""
+
+
 def is_valid(s: str) -> bool:
     """
     Check if the input string s contains valid parentheses.
@@ -7,6 +10,7 @@ def is_valid(s: str) -> bool:
 
     Returns:
         bool: True if the parentheses are valid, False otherwise.
+
     """
     stack: list[str] = []
     mapping: dict[str, str] = {
@@ -33,6 +37,6 @@ def is_valid(s: str) -> bool:
 
 if __name__ == "__main__":  # pragma: no cover
     # Example usage
-    input_string = "{[()]}"
-    result = is_valid(input_string)
+    input_string: str = "{[()]}"
+    result: bool = is_valid(input_string)
     print(f"The parentheses in '{input_string}' are valid: {result}")

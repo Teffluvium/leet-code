@@ -4,7 +4,7 @@ from leet_code.longest_common_prefix import longest_common_prefix
 
 
 @pytest.mark.parametrize(
-    "input_strs, expected_output",
+    ("input_strs", "expected_output"),
     [
         (["flower", "flow", "flight"], "fl"),
         (["dog", "racecar", "car"], ""),

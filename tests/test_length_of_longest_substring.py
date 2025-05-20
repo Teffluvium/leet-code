@@ -1,37 +1,29 @@
+import pytest
+
 from leet_code.length_of_longest_substring import length_of_longest_substring
 
 
-def test_length_of_longest_substring_empty_string() -> None:
-    assert length_of_longest_substring("") == 0
+@pytest.mark.parametrize(
+    ("input_string", "expected_length"),
+    [
+        ("", 0),
+        ("a", 1),
+        ("abcdef", 6),
+        ("abcabcbb", 3),
+        ("aaaaaa", 1),
+        ("pwwkew", 3),
+        ("a b c a b c", 3),
+        ("!@#$%^&*()", 10),
+        ("123123456", 6),
+    ],
+)
+def test_length_of_longest_substring(input_string: str, expected_length: int) -> None:
+    """
+    Test the length_of_longest_substring function with various inputs.
 
+    Args:
+        input_string (str): The input string to test.
+        expected_length (int): The expected length of the longest substring without repeating characters.
 
-def test_length_of_longest_substring_single_character() -> None:
-    assert length_of_longest_substring("a") == 1
-
-
-def test_length_of_longest_substring_all_unique() -> None:
-    assert length_of_longest_substring("abcdef") == 6
-
-
-def test_length_of_longest_substring_repeating_characters() -> None:
-    assert length_of_longest_substring("abcabcbb") == 3
-
-
-def test_length_of_longest_substring_all_same_characters() -> None:
-    assert length_of_longest_substring("aaaaaa") == 1
-
-
-def test_length_of_longest_substring_mixed_characters() -> None:
-    assert length_of_longest_substring("pwwkew") == 3
-
-
-def test_length_of_longest_substring_with_spaces() -> None:
-    assert length_of_longest_substring("a b c a b c") == 3
-
-
-def test_length_of_longest_substring_with_special_characters() -> None:
-    assert length_of_longest_substring("!@#$%^&*()") == 10
-
-
-def test_length_of_longest_substring_with_numbers() -> None:
-    assert length_of_longest_substring("123123456") == 6
+    """
+    assert length_of_longest_substring(input_string) == expected_length

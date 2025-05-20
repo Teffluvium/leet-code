@@ -4,7 +4,7 @@ from leet_code.zigzag_conversion import convert
 
 
 @pytest.mark.parametrize(
-    "s, num_rows, expected",
+    ("s", "num_rows", "expected"),
     [
         ("", 1, ""),
         ("A", 0, "A"),

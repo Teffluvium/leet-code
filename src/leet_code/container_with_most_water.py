@@ -1,5 +1,7 @@
 def max_area(height: list[int]) -> int:
     """
+    Find container with the most water.
+
     Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai).
     n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0).
     Find two lines, which together with the x-axis forms a container, such that the container contains the most water.
@@ -11,6 +13,7 @@ def max_area(height: list[int]) -> int:
 
     Returns:
         int: The maximum area of water that can be contained by the lines.
+
     """
     largest_area = 0
     ind_start = 0
@@ -23,8 +26,7 @@ def max_area(height: list[int]) -> int:
         current_area = current_height * (ind_end - ind_start)
 
         # Update the maximum area if current area is greater
-        if current_area > largest_area:
-            largest_area = current_area
+        largest_area = max(largest_area, current_area)
 
         # Move the shorter line towards the center
         if height[ind_start] < height[ind_end]:

@@ -4,7 +4,7 @@ from leet_code.string_to_integer import my_atoi
 
 
 @pytest.mark.parametrize(
-    "input_str, expected",
+    ("input_str", "expected"),
     [
         ("42", 42),
         ("   -42", -42),

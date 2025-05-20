@@ -1,5 +1,6 @@
 def int_to_roman(num: int) -> str:
-    """Convert an integer to a Roman numeral.
+    """
+    Convert an integer to a Roman numeral.
 
     Roman numerals are represented by seven different symbols:
 
@@ -25,9 +26,13 @@ def int_to_roman(num: int) -> str:
 
     Raises:
         ValueError: If the input integer is not between 1 and 3999.
+
     """
-    if num <= 0 or num >= 4000:
-        raise ValueError("Input must be between 1 and 3999.")
+    min_num = 1
+    max_num = 3999
+    if num < min_num or num > max_num:
+        msg = "Input must be between 1 and 3999."
+        raise ValueError(msg)
 
     rom_symbols = [
         "M",
@@ -56,18 +61,22 @@ def int_to_roman(num: int) -> str:
 
 
 def roman_to_int(s: str) -> int:
-    """Convert a Roman numeral to an integer.
+    """
+    Convert a Roman numeral to an integer.
 
     Args:
         s (str): The Roman numeral to convert.
 
     Returns:
         int: The integer representation of the Roman numeral.
+
     """
     if s == "MMMM":
-        raise ValueError("Invalid Roman numeral: 'MMMM' is not allowed.")
+        msg = "Invalid Roman numberal 'MMMM' is not allowed."
+        raise ValueError(msg)
     if not s:
-        raise ValueError("Invalid Roman numeral: empty string is not allowed.")
+        msg = "Invalid Roman numeral: empty string is not allowed."
+        raise ValueError(msg)
 
     rom: dict[str, int] = {
         "I": 1,
