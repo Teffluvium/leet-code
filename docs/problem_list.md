@@ -45,3 +45,7 @@
 ## Problem 12 - Integer to Roman
 
 ::: int_to_roman.int_to_roman
+
+## Problem 13 - Roman to Integer
+
+::: int_to_roman.roman_to_int
