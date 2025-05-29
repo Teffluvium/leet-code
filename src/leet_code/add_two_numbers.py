@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from leet_code.list_node import ListNode
+from utils.list_node import ListNode
 
 
 def add_two_numbers(

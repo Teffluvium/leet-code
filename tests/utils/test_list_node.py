@@ -2,7 +2,7 @@ from contextlib import nullcontext as does_not_raise
 
 import pytest
 
-from leet_code.list_node import ListNode
+from utils.list_node import ListNode
 
 
 @pytest.mark.parametrize(

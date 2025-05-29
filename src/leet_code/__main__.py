@@ -3,9 +3,9 @@
 from leet_code import container_with_most_water, palindrome_number, string_to_integer, zigzag_conversion
 from leet_code.add_two_numbers import add_two_numbers
 from leet_code.length_of_longest_substring import length_of_longest_substring
-from leet_code.list_node import ListNode
 from leet_code.longest_palindromic_substring import longest_palindromic_substring
 from leet_code.two_sum import two_sum
+from utils.list_node import ListNode
 
 
 def two_sum_example() -> None:

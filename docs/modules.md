@@ -2,4 +2,4 @@
 
 ## ListNode Class
 
-::: ListNode.ListNode
+::: utils.list_node.ListNode
