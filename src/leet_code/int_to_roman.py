@@ -52,7 +52,7 @@ def int_to_roman(num: int) -> str:
     rom_values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
     result_roman_numeral = ""
 
-    for symbol, value in zip(rom_symbols, rom_values):
+    for symbol, value in zip(rom_symbols, rom_values, strict=False):
         while num >= value:
             result_roman_numeral += symbol
             num -= value
